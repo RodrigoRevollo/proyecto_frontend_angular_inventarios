@@ -1,1 +1,19 @@
-<p>login works!</p>
+<h1>INGRESAR AL SISTEMA</h1>
+
+<div [formGroup]="loginForm">
+    <label for="">Ingrese Correo: </label>
+    <input type="email" formControlName = "email">
+    <br>
+    <label for="">Ingrese Contraseña: </label>
+    <input type="password" formControlName = "password">
+    <br>
+    <button (click)="funIngresarConLaravel()" [disabled]="!loginForm.valid">INGRESAR AL SISTEMA</button>
+
+</div>
+<hr>
+Bienvenido: {{respuesta_login().usuario?.name}}
+<hr>
+{{loginForm.value | json}}
+<hr>
+VALIDO: {{loginForm.valid}}
+
