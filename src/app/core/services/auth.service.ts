@@ -17,7 +17,7 @@ export class AuthService {
     }
 
     funPerfil(){
-
+        return this.http.get(`${this.urlBase}/api/v1/auth/profile`);
     }
 
     funLogout(){

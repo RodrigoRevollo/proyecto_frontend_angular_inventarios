@@ -1,1 +1,5 @@
-<p>perfil works!</p>
+<h1>Mi Perfil</h1>
+@if(perfil().id){
+    <h1>NOMBRE: {{perfil().name}}</h1>
+    <h1>CORREO: {{perfil().email}}</h1>
+}
