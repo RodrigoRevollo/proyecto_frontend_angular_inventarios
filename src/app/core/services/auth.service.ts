@@ -8,19 +8,19 @@ export class AuthService {
 
     http = inject(HttpClient);
 
-    funLoginLaravel(credenciales: any){
-        return this.http.post(`${this.urlBase}/api/v1/auth/login`,credenciales);
+    funLoginLaravel(credenciales: any) {
+        return this.http.post(`${this.urlBase}/api/v1/auth/login`, credenciales);
     }
 
-    funRegister(){
-        
+    funRegister() {
+
     }
 
-    funPerfil(){
+    funPerfil() {
         return this.http.get(`${this.urlBase}/api/v1/auth/profile`);
     }
 
-    funLogout(){
+    funLogout() {
 
     }
 }

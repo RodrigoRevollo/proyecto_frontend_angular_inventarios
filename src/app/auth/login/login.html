@@ -2,10 +2,10 @@
 
 <div [formGroup]="loginForm">
     <label for="">Ingrese Correo: </label>
-    <input type="email" formControlName = "email">
+    <input type="email" formControlName="email">
     <br>
-    <label for="">Ingrese Contraseña: </label>   
-    <input type="password" formControlName = "password">
+    <label for="">Ingrese Contraseña: </label>
+    <input type="password" formControlName="password">
     <br>
     <button (click)="funIngresarConLaravel()" [disabled]="!loginForm.valid || loading()">INGRESAR AL SISTEMA</button>
     @if (loading()){
@@ -18,4 +18,3 @@ Bienvenido: {{respuesta_login().usuario?.name}}
 {{loginForm.value | json}}
 <hr>
 VALIDO: {{loginForm.valid}}
-
